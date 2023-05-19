@@ -1,17 +1,186 @@
 [data-theme="light"] {
 	--fondo-svg: url(./imagenes/moon-solid.svg);
-	--fondo: #edf2f4;
-	--fondoPomo: #2e294e;
-	--texto: #2b2d42;
-	--textoPomo: #eadeda;
+	--fondo: #B0A8B9;
+	--fondoVentana: #845EC2;
+	--texto: #000;
+	--textoVentana: #4B4453;
+    --fondoTareas: #B0A8B9;
+    --fondoTareasHover: #7a7480;
 }
 
 [data-theme="dark"] {
 	--fondo-svg: url(./imagenes/sun-solid.svg);
-	--fondo: #2e294e;
-	--fondoPomo: #7872a0;
-	--texto: #eadeda;
-	--textoPomo: #2e294e;
+	--fondo: #04151F;
+	--fondoVentana: #210C19;
+	--texto: #fff;
+	--textoVentana: #FF8066;
+    --fondoTareas: #49253b;
+    --fondoTareasHover: #693354;
+}
+
+body {
+	background: var(--fondo);
+	font-family: "Chakra Petch", sans-serif;
+	height: 100%;
+}
+
+/* -------------------------------------------------------------------- */
+
+/* main {
+    height: 84vh;
+}
+
+body {
+    height: 100%;
+} */
+
+header {
+	min-height: 6vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+h1 {
+    font-size: 2em;
+    color: var(--texto);
+}
+
+/* -------------------------------------------------------------------- */
+
+footer {
+	width: 100%;
+    color: var(--texto);
+	min-height: 10vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+footer a:visited {
+	text-decoration: none;
+}
+
+footer a:hover {
+	text-decoration: none;
+}
+
+.caja-links {
+	width: 100px;
+	display: flex;
+	margin: 10px;
+	justify-content: space-between;
+}
+
+.fab:hover {
+	filter: brightness(3);
+}
+
+.fab {
+	color: var(--texto);
+	font-size: 1.5em;
+}
+
+/* -------------------------------------------------------------------- */
+
+main {
+	height: 84vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.caja-lista-tareas {
+	background: var(--fondoVentana);
+	color: var(--textoVentana);
+	padding: 20px;
+	border-radius: 10px;
+	min-height: 200px;
+	width: 350px;
+}
+
+.caja-dia-hora {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 10px;
+}
+
+.dia-actual {
+	color: var(--texto);
+	font-weight: 900;
+	font-size: 1.3em;
+}
+
+.hora-actual {
+	color: var(--textoVentana);
+	font-weight: 900;
+	font-size: 1.3em;
+}
+
+.caja-tareas {
+	display: flex;
+	justify-content: center;
+	box-sizing: border-box;
+}
+
+.caja-agregar {
+	display: flex;
+	justify-content: space-between;
+	width: 260px;
+	margin-bottom: 8px;
+}
+
+.agregar-tarea {
+	border-radius: 10px;
+	padding: 2px 7px;
+	width: 175px;
+}
+
+#agrega {
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+#agrega:hover {
+	color: rgb(36, 34, 34);
+}
+
+.tareas {
+	background: var(--fondoTareas);
+    color: var(--textoVentana);
+	border-radius: 10px;
+	margin-bottom: 4px;
+	padding: 2px 7px 4px 7px;
+	max-width: 250px;
+	word-wrap: break-word;
+	cursor: pointer;
+	transition: 0.5s background;
+}
+
+.tareas:hover {
+	background: var(--fondoTareasHover);
+}
+
+#borrar {
+	height: 15px;
+	width: 15px;
+	cursor: pointer;
+	display: flex;
+	position: relative;
+	left: 258px;
+    fill: var(--texto);
+}
+
+#borrar:hover {
+	fill: red;
+}
+
+.tachar {
+	background: var(--fondo);
+	text-decoration: line-through;
+	text-decoration-color: red;
+	text-decoration-thickness: 2px;
 }
 
 /* Configuracion switch color tema */
@@ -22,7 +191,7 @@
 	position: absolute;
 	right: 15px;
 	top: 10px;
-	width: 250px;
+	/* width: 250px; */
 }
 
 .switch {
@@ -72,159 +241,10 @@ input:checked + .slider:before {
 	transform: translateX(26px);
 }
 
-body {
-	background: #2e294e;
-	font-family: "Chakra Petch", sans-serif;
-	height: 100%;
-}
-
-/* -------------------------------------------------------------------- */
-
-/* main {
-    height: 84vh;
-}
-
-body {
-    height: 100%;
-} */
-
-header {
-	min-height: 6vh;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-
-/* -------------------------------------------------------------------- */
-
-footer {
-	width: 100%;
-	min-height: 10vh;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-}
-
-footer a:visited {
-	text-decoration: none;
-}
-
-footer a:hover {
-	text-decoration: none;
-}
-
-.caja-links {
-	width: 100px;
-	display: flex;
-	margin: 10px;
-	justify-content: space-between;
-}
-
-.fab:hover {
-	filter: brightness(3);
-}
-
-.fab {
-	color: var(--texto);
-	font-size: 1.5em;
-}
-
-/* -------------------------------------------------------------------- */
-
-main {
-	height: 84vh;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-.caja-lista-tareas {
-	background: #f46036;
-	color: #2e294e;
-	padding: 20px;
-	border-radius: 10px;
-	min-height: 200px;
-	width: 350px;
-}
-
-.caja-dia-hora {
-	display: flex;
-	flex-direction: column;
-	margin-bottom: 10px;
-}
-
-.dia-actual {
-	color: #2e294e;
-	font-weight: 900;
-	font-size: 1.3em;
-}
-
-.hora-actual {
-	color: #51488b;
-	font-weight: 900;
-	font-size: 1.3em;
-}
-
-.caja-tareas {
-	display: flex;
-	justify-content: center;
-	box-sizing: border-box;
-}
-
-.caja-agregar {
-	display: flex;
-	justify-content: space-between;
-	width: 260px;
-	margin-bottom: 8px;
-}
-
-.agregar-tarea {
-	border-radius: 10px;
-	padding: 2px 7px;
-	width: 175px;
-}
-
-#agrega {
-    font-size: 1.5em;
-    cursor: pointer;
-}
-
-#agrega:hover {
-	fill: rgb(36, 34, 34);
-}
-
-.tareas {
-	background: #c5d86d;
-	border-radius: 10px;
-	margin-bottom: 4px;
-	padding: 2px 7px 4px 7px;
-	max-width: 250px;
-	word-wrap: break-word;
-	cursor: pointer;
-	transition: 0.5s background;
-}
-
-.tareas:hover {
-	background: #a7bb57;
-}
-
-#borrar {
-	height: 15px;
-	width: 15px;
-	cursor: pointer;
-	display: flex;
-	position: relative;
-	left: 258px;
-}
-
-#borrar:hover {
-	fill: rgb(255, 0, 0);
-}
-
-.tachar {
-	background: lightgray;
-	text-decoration: line-through;
-	text-decoration-color: red;
-	text-decoration-thickness: 2px;
+@media screen and (max-width: 416px) {
+	.contenedor-switch {
+		top: 50px;
+		width: 100%;
+		justify-content: space-evenly;
+	}
 }
