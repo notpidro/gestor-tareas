@@ -3,9 +3,10 @@
 	--fondo: #B0A8B9;
 	--fondoVentana: #845EC2;
 	--texto: #000;
-	--textoVentana: #4B4453;
+	--textoVentana: #000;
     --fondoTareas: #B0A8B9;
     --fondoTareasHover: #7a7480;
+    --iconosFooter: #845EC2;
 }
 
 [data-theme="dark"] {
@@ -16,6 +17,7 @@
 	--textoVentana: #FF8066;
     --fondoTareas: #49253b;
     --fondoTareasHover: #693354;
+    --iconosFooter: #845EC2;
 }
 
 body {
@@ -78,7 +80,7 @@ footer a:hover {
 }
 
 .fab {
-	color: var(--texto);
+	color: var(--iconosFooter);
 	font-size: 1.5em;
 }
 
