@@ -1,0 +1,101 @@
+body {
+    background: #2E294E;
+    font-family: 'Chakra Petch', sans-serif;
+}
+
+main {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.caja-lista-tareas {
+    background: #F46036;
+    color: #2E294E;
+    padding: 20px;
+    border-radius: 10px;
+    min-height: 200px;
+    width: 350px;
+}
+
+.caja-dia-hora {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.dia-actual {
+    color: #2E294E;
+    font-weight: 900;
+    font-size: 1.3em;
+}
+
+.hora-actual {
+    color: #51488b;
+    font-weight: 900;
+    font-size: 1.3em;
+}
+
+.caja-tareas {
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.caja-agregar {
+    display: flex;
+    justify-content: space-between;
+    width: 260px;
+    margin-bottom: 8px;
+}
+
+.agregar-tarea {
+    border-radius: 10px;
+    padding: 2px 7px;
+    width: 175px;
+}
+
+#agrega {
+    height: 30px;
+    cursor: pointer;
+}
+
+#agrega:hover {
+    fill: rgb(36, 34, 34);
+}
+
+.tareas {
+    background: #C5D86D;
+    border-radius: 10px;
+    margin-bottom: 4px;
+    padding: 2px 7px 4px 7px;
+    max-width: 250px;
+    word-wrap: break-word;
+    cursor: pointer;
+    transition: 0.5s background;
+}
+
+.tareas:hover {
+    background: #a7bb57;
+}
+
+#borrar {
+    height: 15px;
+    width: 15px;
+    cursor: pointer;
+    display: flex;
+    position: relative;
+    left: 258px;
+}
+
+#borrar:hover {
+    fill: rgb(255, 0, 0);
+}
+
+.tachar {
+    background: lightgray;
+    text-decoration: line-through;
+    text-decoration-color: red;
+    text-decoration-thickness: 2px;
+}
